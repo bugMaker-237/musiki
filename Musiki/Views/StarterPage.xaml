@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="Musiki.Views.StarterPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Musiki.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    RequestedTheme="Dark" Background="Black">
+    <Page.Resources>
+        <Thickness x:Key="MarginTop">0,20,0,0</Thickness>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="450"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="450"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+            <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="../Assets/starter-back.jpg" AlignmentY="center" AlignmentX="Center"/>
+        </Grid.Background>
+        <Grid Background="Black" Grid.RowSpan="3" Grid.ColumnSpan="3" Opacity="0.5" >
+        </Grid>
+        <Frame Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel >
+            <Image Source="../Assets/M.png" Height="100"/>
+            <TextBlock Text="You are the Maestro !" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="{StaticResource MarginTop}" ></TextBlock>
+            <TextBlock Text="Welcome to MUSIKI. A music by you, for you and your team. Discover new songs, rediscover old ones depending on what you love and actually based on who you are ! Get started and enjoy the rhythm!" Margin="{StaticResource MarginTop}" FontSize="12" TextWrapping="Wrap" VerticalAlignment="Center" TextAlignment="Center" LineHeight="20" HorizontalAlignment="Center"></TextBlock>
+            <Button Margin="{StaticResource MarginTop}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Height="50" >Let's do this</Button>
+        </StackPanel>
+        </Frame>
+    </Grid>
+</Page>
